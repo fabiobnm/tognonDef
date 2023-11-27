@@ -1,0 +1,410 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+@font-face {
+  font-family: 'Brandon';
+  src: url('/Brandon-Grotesque-Web-Regular.woff2') format('woff2'), /* Formato del font WOFF 2.0 */
+       url('/Brandon-Grotesque-Web-Regular.woff') format('woff'); /* Formato del font WOFF 1.0 */
+
+}
+@font-face {
+  font-family: 'BrandonThin';
+  src: url('/Brandon-Grotesque-Web-Thin.woff2') format('woff2'), /* Formato del font WOFF 2.0 */
+       url('/Brandon-Grotesque-Web-Thin.woff') format('woff'); /* Formato del font WOFF 1.0 */
+
+}
+
+
+body {
+  color: black;
+  background: white;
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Brandon';
+  
+}
+.aboutFont{
+  margin: 20px;
+}
+.aboutFont p{
+  text-align: center;
+}
+.aboutFont a{
+  font-weight: bold;
+}
+.aboutFont{
+  font-family: 'Brandon';
+
+}
+.fade-in {
+  opacity: 0;
+  transition: opacity 5s ease-in-out;
+}
+
+.fade-in.loaded {
+  opacity: 1;
+}
+
+.imgList{
+  flex: 33% !important;
+  max-width: 31%;
+}
+.imgListCollect{
+  max-width: 30%;
+}
+
+.slick-slide img {
+  display: block;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  max-width: 70vW !important;
+  object-fit: contain;
+
+}
+.slick-slider {
+padding-top: 50px;
+}
+.sliderMobile{
+  display: none;
+}
+.slideDesktop{
+  display: block;
+}
+.slick-dots{
+  display: none;
+  visibility: hidden;
+}
+.slick-prev {
+  right: 0px!important;
+   background:transparent !important; 
+  height: 100% !important;
+  width: 50% !important;
+  z-index: 99;
+  cursor: url(/prev.png), auto !important;
+}
+
+.slick-next {
+  right: 0px!important;
+   background: transparent !important; 
+  height: 100% !important;
+  width: 50% !important;
+  z-index: 99;
+  cursor: url(/nextYo.png), auto !important;
+}
+.slick-next:before {
+  content: none !important;
+}
+.slick-prev:before {
+  content: none !important;
+}
+.header{
+  display: flex;
+  width: 25vw;
+  height: 100vh;
+  position: fixed;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2vw;
+}
+img{
+  max-width: none;
+}
+
+
+.flex-item img {
+  aspect-ratio: 3/2; /* Set the aspect ratio to 3:2 */
+  width: 100%;
+  object-fit: cover; /* Ensure the image covers the container while maintaining aspect ratio */
+}
+
+.nameBar{
+  justify-content: end;
+display: flex;
+  position: fixed;
+bottom: 0px;
+right: 0px;
+padding: 2vw;
+width: 50vw;
+text-align: right;
+background:transparent;
+}
+
+.portCover{
+  aspect-ratio: 3/4;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+.galleryImg {
+  height: 80vH;
+  width: auto;
+}
+
+.flex-item .projCoverPort {
+  aspect-ratio: 2/3; /* Set the aspect ratio to 3:2 */
+  width: 100%;
+  object-fit: cover; /* Ensure the image covers the container while maintaining aspect ratio */
+}
+
+.menu{
+
+}
+
+.logoImg{
+  width: 100%;
+  margin-top: 25%;
+}
+
+.leftHeader{
+  background:white;
+   width: 27vW;
+    margin-left: 0vW
+}
+
+.indexCover{
+  height: 85vH;
+    width: auto;
+    max-width: 90%;
+    object-fit: cover;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+#text-about{
+ padding: 50px 50px 50px 0;
+    display: block;
+    flex-wrap: wrap;
+    gap: 3vh 3%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+.titleProjBrand{
+  margin-top: 15px;
+  font-size: 13px;
+  text-align: right;
+}
+
+.contentArea{
+  width: 75vw;
+  margin-left: 25vw;
+}
+#projectsContainer{
+  padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3vH;
+    row-gap: 3vH;
+}
+#collectibleContainer{
+  padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 50px;
+    padding-left: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3vH;
+    row-gap: 3vH;
+}
+#indexContainer{
+  padding-top: 50px;
+    padding-bottom: 50px;
+    
+}
+.voceMenu:hover{
+  text-decoration: underline 1px;
+  text-underline-offset: 5px;
+}
+
+.underlineText:hover{
+  text-decoration: underline 1px;
+  text-underline-offset: 5px;
+}
+
+
+#flexContainer{
+padding-top:50px;
+padding-bottom:50px;
+ padding-right:50px;
+  display: flex;
+  gap:1%
+}
+
+.titleProjMobile{
+  display: none;
+}
+.menuMobile{
+  display: none;
+  visibility: hidden;
+  
+}
+.hamburger{
+ display: none;
+ visibility: hidden;
+}
+.divHam{
+  display: none
+}
+
+/*
+mediaaaaaaaaaaaaaaaakjhsdksjhgsfkgjhsdgkadjhgadkjghadgkjadhfakdjghadkgjhadgkadjghadkgjhagk
+aaaaaaaaaaaaaa
+aaaaaaaaaaaaaa
+*/
+
+@media only screen and (max-width: 768px) {
+.menu{
+  display: none;
+  gap: 2vh;
+  margin-top: 13vW;
+  padding-right: 10vW;
+  padding-left: 8vW;
+}
+.menuMobile{
+  display: flex;
+  visibility: visible;
+  gap: 1vh;
+  margin-top: 13vW;
+  padding-right: 10vW;
+  padding-left: 8vW;
+}
+.imgList{
+  max-width: 100%;
+}
+.imgListCollect{
+  max-width: 47.5%;
+  min-width: 47%;
+}
+.divHam{
+  display: block
+}
+.hamburger{
+  display: block;
+  visibility: visible;
+  padding: 10vW;
+    width: 103px;
+    height: 103px;
+}
+#indexContainer{
+  padding:10vw;
+    padding-top: 15vh;
+    
+}
+.indexCover{
+  max-width: 100%;
+}
+.sliderMobile {
+    padding-left: 10vW;
+    display: block;
+    padding-right: 10vW;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.slideDesktop{
+  display: none;
+}
+.voceMenu{
+  font-size: 8px;
+  
+}
+.header{
+  padding: 0;
+  background-color: white;
+      display: flex;
+    width: 25vw;
+height: 10vh;
+  width: 100vw;
+  flex-direction: row;
+  z-index: 99;
+}
+
+.contentArea{
+  width: 100vw;
+  height: 100vh;
+  margin-left: 0vw;
+}
+#projectsContainer{
+  padding: 25vW 10vw 10vw 10vw;
+   display: flex;
+  flex-wrap: wrap;
+   gap: 3vH;
+  row-gap: 3vH;
+  flex-direction: column;
+}
+#collectibleContainer {
+  padding-top: 100px;
+  padding-bottom: 50px;
+  padding-right: 10vW;
+  padding-left: 10vW;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vH;
+  row-gap: 2vH;
+}
+#text-about{
+  padding: 10vW;
+  font-size: 10px;
+}
+#flexContainer{
+  padding-top:100px;
+  padding-bottom:50px;
+   padding-right:10vW;
+   padding-left: 10vW;
+    display: flex;
+    gap:1%;
+    flex-direction: column;
+
+  }
+  .galleryImg{
+width: 100%;
+    height: max-content;
+    margin-bottom: 7vW;
+  }
+  .logoImg{
+    margin-top: 0;
+    padding: 0;
+    padding-left: 10vW;
+    width: 40vW;
+    padding-top: 10vW;
+  }
+  .titleProjMobile{
+    display: block;
+    text-align: right;
+    font-size: 7px;  
+  }
+
+    .indexCover{
+      height: 70vH;
+       
+    }
+
+    .nameBar{
+      justify-content: end;
+      position: fixed;
+      display: flex;
+      bottom: 0;
+      right: 0;
+      width: 100vw;
+      /* text-align: right; */
+      background: #fff;
+      font-size: 12px;
+      padding: 3vw 10vw 5vw 3vw;
+    }
+}
