@@ -35,14 +35,14 @@ export default function Blog() {
     // Modifica la query per accettare una variabile
     const APOLLO_QUERY = gql`
         query MyQuery($projectId: String!) {
-          brands(where: {name: $projectId}) {
+          projects(where: {brand: {name: $projectId}}) {
             id
-            name
+            title
             gallery {
               url
             }
-                
-              }
+            slug
+          }
         }
     `;
 
@@ -53,8 +53,8 @@ export default function Blog() {
     const projectXpage = await graphcms.request(APOLLO_QUERY, variables);
 
     console.log('vediamo pro');
-    console.log(projectXpage.brands);
-    setPost(projectXpage.brands[0]);
+    console.log(projectXpage.projects);
+    setPost(projectXpage.projects);
 
     console.log('ei')
 
@@ -140,60 +140,49 @@ export default function Blog() {
 )}
 
    </div>
-   <div className="contentArea">
-    <div class='slideDesktop'>
-        <Slider {...settings}>
-          {post?.gallery?.map((o, i) => (
-            <div key={i}>
-              <Image
-                className="galleryImg"
-                src={o.url}
-                alt="Description of the image"
-                width={600}
-                height={400}
-                priority={true} // Se stai usando la funzionalità di rendering di priorità di Next.js
-        unoptimized={false} // Se non hai bisogno di ottimizzazione automatica
-        onError={handleLogoError}
-              />
-            </div>
-          ))}
-        </Slider>
+   <div class='contentArea'>
+      
+      
+      <div  class="flex-container" id="collectibleContainer">
+      {post?.map((o,i)=>{
+         return(
+             
+             <div  style={{ flex: '30%'}} key={'progetto_'+i} class='imgList'>
+                 <Link href={{
+     pathname: '/projectpage/'+ o.slug
+   }}> 
+     <Image class='portCover'
+       src={o.gallery[0].url}
+         alt="Description of the image"
+         width={200} // larghezza dell'immagine
+         height={200} // altezza dell'immagine
+         priority={true} // Se stai usando la funzionalità di rendering di priorità di Next.js
+         unoptimized={false} // Se non hai bisogno di ottimizzazione automatica
+         onError={handleLogoError}
+       />
+             <h1 class='titleProjBrand'>{o.title}</h1>
 
+ </Link>
+             
+             </div>
+ 
+         )
+     })}
+  <div class='nameBar'>
+          <h1>{router.query.id}</h1>
+     <Link href="/about">
+     <h1>{post?.title}</h1>
+        </Link> 
+     </div>
     
-
-        </div>
-        <div className='sliderMobile'>
-        {post?.gallery?.map((o,i)=>{
-        return(
-          
+ 
+    
+      
      
-            <Image class="galleryImg" 
-            src={o.url}
-            alt="Description of the image"
-            width={600} // larghezza dell'immagine
-            height={400} // altezza dell'immagine
-            priority={true} // Se stai usando la funzionalità di rendering di priorità di Next.js
-        unoptimized={false} // Se non hai bisogno di ottimizzazione automatica
-        onError={handleLogoError}
-          />
-
-        )
-    })}
-
-        </div>
-
-        <div className="nameBar">
-          <h1>{post?.title}</h1>
-          <Link
-            href={{
-              pathname: '/brandpage/' + post?.brand?.name,
-            }}
-          >
-            <h1 class='underlineText' style={{marginLeft:'10px'}}>{post?.brand?.name}</h1>
-          </Link>
-        </div>
-
-
+ 
+ 
+     
+       </div>
       </div>
 
      </div>

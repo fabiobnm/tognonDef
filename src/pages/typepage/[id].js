@@ -181,7 +181,6 @@ export default function Blog() {
         unoptimized={false} // Se non hai bisogno di ottimizzazione automatica
         onError={handleLogoError}
       />
-            <h1 class='titleProjBrand'>{o.title}</h1>
 
 </Link>
             
