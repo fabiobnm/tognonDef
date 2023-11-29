@@ -39,6 +39,9 @@ export default function Blog() {
             url
           }
           slug
+          cover{
+            url
+          }
         }
       }
     `;
@@ -129,7 +132,7 @@ export default function Blog() {
     pathname: '/projectpage/'+ prog.slug
   }}> 
    <Image class="projCover"
-        src={prog.gallery[0].url}
+        src={prog.cover?.url ||  prog.gallery[0].url}
         alt="Description of the image"
         width={300} // larghezza dell'immagine
         height={200} // altezza dell'immagine
