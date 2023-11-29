@@ -129,6 +129,7 @@ img{
   aspect-ratio: 3/2; /* Set the aspect ratio to 3:2 */
   width: 100%;
   object-fit: cover; /* Ensure the image covers the container while maintaining aspect ratio */
+  object-position: bottom;
 }
 
 .nameBar{
@@ -287,6 +288,7 @@ aaaaaaaaaaaaaa
 }
 .imgList{
   max-width: 100%;
+  min-width: 100%
 }
 .imgListCollect{
   max-width: 47.5%;
