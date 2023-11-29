@@ -221,8 +221,8 @@ background:transparent;
     padding-left: 50px;
     display: flex;
     flex-wrap: wrap;
-    gap: 3vH;
-    row-gap: 3vH;
+    gap: 2vH;
+    row-gap: 2vH;
 }
 #indexContainer{
   padding-top: 50px;
