@@ -24,43 +24,6 @@ export default function Blog() {
   };
 
 
-/*
-  const articoliOld = async(id)=>{
-
-    const graphcms = new GraphQLClient(
-        'https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clnyvwdsv03co01tc0on38e2k/master'
-
-      );
-
-
-      let idc = 'fsdfsfsdfsdf'
-      const APOLLO_QUERY = gql`
-      query MyQuery {
-        project(where: {id: "cloisgr2g2n5q0bwdwj1syq4s"}) {
-          id
-          title
-          gallery {
-            url
-          }
-        }
-      }
-      
-      
-      `;
-
-        const variables = {
-            first: 20,
-            skip:0
-          };
-
-        const projectXpage = await graphcms.request(APOLLO_QUERY,variables)
-
-        console.log(projectXpage.projects);
-        setPost(projectXpage.project.gallery)
-
-  }
-  */
-
   const articoli = async (id) => {
     const graphcms = new GraphQLClient(
         'https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clnyvwdsv03co01tc0on38e2k/master'
@@ -74,6 +37,9 @@ export default function Blog() {
                 title
                 slug
                 gallery{
+                  url
+                }
+                cover{
                   url
                 }
                 
@@ -173,7 +139,7 @@ export default function Blog() {
     pathname: '/collectiblepage/'+ o.slug
   }}> 
     <Image class='portCover'
-      src={o.gallery[0].url}
+      src={o.cover?.url ||  o.gallery[0].url}
         alt="Description of the image"
         width={200} // larghezza dell'immagine
         height={200} // altezza dell'immagine
