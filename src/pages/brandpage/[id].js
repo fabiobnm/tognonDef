@@ -45,6 +45,9 @@ export default function Blog() {
             cover{
               url
             }
+            portrait{
+              url
+            }
           }
         }
     `;
@@ -155,7 +158,7 @@ export default function Blog() {
      pathname: '/projectpage/'+ o.slug
    }}> 
      <Image class='portCover'
-       src={o.cover?.url ||  o.gallery[0].url}
+       src={o.portrait?.url ||  o.gallery[0].url}
          alt="Description of the image"
          width={200} // larghezza dell'immagine
          height={200} // altezza dell'immagine
