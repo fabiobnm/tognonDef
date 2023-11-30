@@ -169,6 +169,7 @@ export default function Blog() {
             alt="Description of the image"
             width={600} // larghezza dell'immagine
             height={400} // altezza dell'immagine
+            loading="eager"
             priority={true} // Se stai usando la funzionalità di rendering di priorità di Next.js
         unoptimized={false} // Se non hai bisogno di ottimizzazione automatica
         onError={handleLogoError}

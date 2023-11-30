@@ -167,7 +167,7 @@ export default function Blog() {
             alt="Description of the image"
             width={600} // larghezza dell'immagine
             height={400} // altezza dell'immagine
-            loading="lazy"
+            loading="eager"
         unoptimized={false} // Se non hai bisogno di ottimizzazione automatica
         onError={handleLogoError}
           />
