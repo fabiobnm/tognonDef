@@ -33,23 +33,24 @@ export default function Blog() {
 
     // Modifica la query per accettare una variabile
     const APOLLO_QUERY = gql`
-        query MyQuery($projectId: String!) {
-            projects(where: {slug: $projectId}) {
-                id
-                title
-                gallery {
-                    url
-                }
-                brand{
-                    name
-                }
-               
-            }
+    query MyQuery($first: Int, $skip: Int, $projectId: String!) {
+      projects(where: { slug: $projectId }) {
+        id
+        title
+        gallery(first: $first, skip: $skip) {
+          url
         }
+        brand {
+          name
+        }
+      }
+    }
     `;
 
     const variables = {
-        projectId: id, // Utilizza la variabile 'id' passata alla funzione
+      first: 100,
+      skip: 0, // Puoi aumentare questo valore per paginare i risultati
+      projectId: router.query.id,
     };
 
     const projectXpage = await graphcms.request(APOLLO_QUERY, variables);

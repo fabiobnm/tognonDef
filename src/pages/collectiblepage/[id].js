@@ -33,23 +33,24 @@ export default function Blog() {
 
     // Modifica la query per accettare una variabile
     const APOLLO_QUERY = gql`
-        query MyQuery($projectId: String!) {
-          collectibles(where: {slug: $projectId}) {
-                id
-                title
-                gallery {
-                    url
-                }
-                collectibleType {
-                  name
-                }
-              
-            }
+    query MyQuery($first: Int, $skip: Int, $projectId: String!) {
+      collectibles(where: { slug: $projectId }) {
+        id
+        title
+        gallery(first: $first, skip: $skip) {
+          url
         }
+        collectibleType {
+          name
+        }
+      }
+    }
     `;
 
     const variables = {
-        projectId: id, // Utilizza la variabile 'id' passata alla funzione
+      first: 100, // Numero massimo di risultati che desideri ottenere in una singola query
+      skip: 0, // Puoi aumentare questo valore per paginare i risultati
+      projectId: router.query.id,
     };
 
     const projectXpage = await graphcms.request(APOLLO_QUERY, variables);
