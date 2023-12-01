@@ -38,6 +38,8 @@ body {
   width: 100vw;
   height: 100vh;
   font-family: 'Brandon';
+  cursor: url(/freccia.PNG), auto !important;
+
   
 }
 .aboutFont{
@@ -97,7 +99,7 @@ padding-top: 50px;
   height: 100% !important;
   width: 50% !important;
   z-index: 99;
-  cursor: url(/prevSmall.png), auto !important;
+  cursor: url(/scrollClick.png), auto !important;
 }
 
 .slick-next {
@@ -106,7 +108,7 @@ padding-top: 50px;
   height: 100% !important;
   width: 50% !important;
   z-index: 99;
-  cursor: url(/nextSmall.png) 20 20, auto !important;
+  cursor: url(/scrollClick.png) 20 20, auto !important;
 }
 .slick-next:before {
   content: none !important;
