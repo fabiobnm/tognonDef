@@ -31,14 +31,17 @@ a{
   cursor: url(/manina.svg), auto !important;
 
 }
+.underlineText{
+  cursor: url(/manina.svg), auto !important;
 
+}
 body {
   color: black;
   background: white;
   width: 100vw;
   height: 100vh;
   font-family: 'Brandon';
-  cursor: url(/freccia.PNG), auto !important;
+  cursor: url(/freccia.svg), auto !important;
 
   
 }
