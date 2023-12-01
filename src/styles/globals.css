@@ -103,7 +103,7 @@ padding-top: 50px;
   height: 100% !important;
   width: 50% !important;
   z-index: 99;
-  cursor: url(/nextYo.png), auto !important;
+  cursor: url(/nextDef.png), auto !important;
 }
 .slick-next:before {
   content: none !important;
@@ -272,6 +272,36 @@ padding-bottom:50px;
   display: none
 }
 
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* colore di sfondo scuro con opacità 0.6 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.imgList:hover .image-overlay {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.image-text {
+  color: white;
+  font-size: 18px;
+  text-align: center;
+}
+
 /*
 mediaaaaaaaaaaaaaaaakjhsdksjhgsfkgjhsdgkadjhgadkjghadgkjadhfakdjghadkgjhadgkadjghadkgjhagk
 aaaaaaaaaaaaaa
@@ -417,4 +447,24 @@ width: 100%;
       font-size: 12px;
       padding: 3vw 10vw 5vw 3vw;
     }
+}
+
+
+/*
+27272727272727227277222727272727
+*/
+
+
+@media screen and (min-width: 2560px) and (min-height: 1440px) {
+  /* Stili specifici per uno schermo di 27 pollici o più grande */
+  h1,h2,h3{
+    font-size: 25px;
+  }
+  #text-about {
+    font-size: 25px !important;
+  }
+  .titleProjBrand{
+    font-size: 25px ;
+  }
+  /* Aggiungi altri stili necessari */
 }
