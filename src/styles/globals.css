@@ -27,7 +27,10 @@
        url('/Brandon-Grotesque-Web-Thin.woff') format('woff'); /* Formato del font WOFF 1.0 */
 
 }
+a{
+  cursor: url(/manina.png), auto !important;
 
+}
 
 body {
   color: black;
@@ -103,7 +106,7 @@ padding-top: 50px;
   height: 100% !important;
   width: 50% !important;
   z-index: 99;
-  cursor: url(/nextSmall.png), auto !important;
+  cursor: url(/nextSmall.png) 20 20, auto !important;
 }
 .slick-next:before {
   content: none !important;
@@ -176,6 +179,7 @@ background:transparent;
 .logoImg{
   width: 100%;
   margin-top: 25%;
+
 }
 
 .leftHeader{
@@ -191,6 +195,7 @@ background:transparent;
     object-fit: cover;
     margin-left: 50%;
     transform: translateX(-50%);
+
 }
 #text-about{
  padding: 50px 50px 50px 0;
