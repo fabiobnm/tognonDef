@@ -99,7 +99,7 @@ padding-top: 50px;
   height: 100% !important;
   width: 50% !important;
   z-index: 99;
-  cursor: url(/scrollClick.png), auto !important;
+  cursor: url(/scrollClick.PNG), auto !important;
 }
 
 .slick-next {
@@ -108,7 +108,7 @@ padding-top: 50px;
   height: 100% !important;
   width: 50% !important;
   z-index: 99;
-  cursor: url(/scrollClick.png) 20 20, auto !important;
+  cursor: url(/scrollClick.PNG), auto !important;
 }
 .slick-next:before {
   content: none !important;
