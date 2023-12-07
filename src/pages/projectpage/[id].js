@@ -148,8 +148,8 @@ export default function Blog() {
                 className="galleryImg"
                 src={o.url}
                 alt="Description of the image"
-                width={600}
-                height={400}
+                width={1200}
+                height={800}
               />
             </div>
           ))}
