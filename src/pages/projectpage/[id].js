@@ -60,7 +60,9 @@ export default function Blog() {
     setPost(projectXpage.projects[0]);
 
     console.log('ei')
-    console.log(post.gallery)
+    console.log(post?.gallery)
+    console.log('guardaaaaaaa');
+    console.log(router.query.s);
 
 }
 
@@ -146,7 +148,11 @@ export default function Blog() {
             <div key={i}>
               <Image
                 className="galleryImg"
-                src={o.url}
+                src={
+                  router.query.s === 'index' 
+                    ? post.gallery[(i + 1) % post.gallery.length].url // Mostra la seconda immagine se s=index e l'indice è 0
+                    : o.url // Altrimenti, mostra l'immagine corrente
+                }
                 alt="Description of the image"
                 width={1200}
                 height={800}

@@ -124,7 +124,8 @@ export default function Blog() {
      <div class="flex-container" id="indexContainer">
      <Link
   href={{
-    pathname: '/projectpage/'+ post.slug
+    pathname: '/projectpage/'+ post.slug ,
+    query: { s: 'index' }, // Aggiungi il parametro s=index
   }}> 
  
        <Image
