@@ -156,6 +156,9 @@ export default function Blog() {
                 alt="Description of the image"
                 width={1200}
                 height={800}
+                loading="eager"
+        unoptimized={false} // Se non hai bisogno di ottimizzazione automatica
+        onError={handleLogoError}
               />
             </div>
           ))}
