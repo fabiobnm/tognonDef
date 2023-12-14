@@ -196,11 +196,12 @@ background:transparent;
 
 .indexCover{
   height: 85vH;
-    width: auto;
-    max-width: 90%;
-    object-fit: cover;
+   
     margin-left: 50%;
     transform: translateX(-50%);
+    max-width: 70vW!important;
+    -o-object-fit: contain;
+    object-fit: contain;
 
 }
 #text-about{

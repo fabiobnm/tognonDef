@@ -131,8 +131,8 @@ export default function Blog() {
        <Image
           className={`indexCover ${imageLoaded ? 'loaded' : 'fade-in'}`}
           src={post?.gallery && post.gallery[0]?.url}
-          width={600}
-          height={400}
+          width={1200}
+          height={800}
           onLoad={() => setImageLoaded(true)}
         priority={true} // Se stai usando la funzionalità di rendering di priorità di Next.js
         unoptimized={false} // Se non hai bisogno di ottimizzazione automatica
