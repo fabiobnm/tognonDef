@@ -146,7 +146,7 @@ export default function Blog() {
         <Slider  {...settings}>
           {post?.gallery?.map((o, i) => (
             <div key={i}>
-              <Image
+              <img
                 className="galleryImg"
                 src={
                   router.query.s === 'index' 
@@ -154,8 +154,6 @@ export default function Blog() {
                     : o.url // Altrimenti, mostra l'immagine corrente
                 }
                 alt="Description of the image"
-                width={1200}
-                height={800}
                 loading="eager"
         unoptimized={false} // Se non hai bisogno di ottimizzazione automatica
         onError={handleLogoError}

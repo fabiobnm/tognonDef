@@ -147,12 +147,10 @@ export default function Blog() {
         <Slider {...settings}>
           {post?.gallery?.map((o, i) => (
             <div key={i}>
-              <Image
+              <img
                 className="galleryImg"
                 src={o.url}
-                alt="Description of the image"
-                width={1200}
-                height={800}
+                alt="Description of the image"            
                 loading="eager"
         unoptimized={false} // Se non hai bisogno di ottimizzazione automatica
         onError={handleLogoError}

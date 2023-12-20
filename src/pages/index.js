@@ -128,11 +128,9 @@ export default function Blog() {
     query: { s: 'index' }, // Aggiungi il parametro s=index
   }}> 
  
-       <Image
+       <img
           className={`indexCover ${imageLoaded ? 'loaded' : 'fade-in'}`}
           src={post?.gallery && post.gallery[0]?.url}
-          width={1200}
-          height={800}
           onLoad={() => setImageLoaded(true)}
         priority={true} // Se stai usando la funzionalità di rendering di priorità di Next.js
         unoptimized={false} // Se non hai bisogno di ottimizzazione automatica
