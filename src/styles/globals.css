@@ -16,16 +16,7 @@
   }
 }
 
-@font-face {
-    font-family: 'Fabio XS';
-    src: url('https://jessicarubbish.com/webFonts/FabioXM-Light.woff2')  format('woff2'), /* IE6-IE8 */
-         url('hhttps://jessicarubbish.com/webFonts/FabioXM-Light.woff') format('woff'), /* Modern browsers */
-}
-@font-face {
-    font-family: 'Fabio XM';
-    src: url('https://jessicarubbish.com/webFonts/FabioXM-Regular.woff2') format('woff2'), /* IE6-IE8 */
-         url('https://jessicarubbish.com/webFonts/FabioXM-Regular.woff') format('woff'), /* Modern browsers */
-}
+
 @font-face {
   font-family: 'Brandon';
   src: url('/Brandon-Grotesque-Web-Regular.woff2') format('woff2'), /* Formato del font WOFF 2.0 */
@@ -51,7 +42,7 @@ body {
   background: white;
   width: 100vw;
   height: 100vh;
-  font-family: 'Fabio XM';
+  font-family: 'Brandon';
   cursor: url(/freccia.svg), auto !important;
 
   
