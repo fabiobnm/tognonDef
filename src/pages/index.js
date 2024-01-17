@@ -4,6 +4,8 @@ import { GraphQLClient } from 'graphql-request';
 import { gql } from 'graphql-request';
 import Image from 'next/image'
 import Link from 'next/link';
+import Head from 'next/head'
+
 
 
 
@@ -83,6 +85,9 @@ export default function Blog() {
 
   return (
 <div>
+     <Head>
+        <title>TOGNON</title>
+      </Head>
 <div class='header'>
    <div class='logo'>
       <Link href="/">
