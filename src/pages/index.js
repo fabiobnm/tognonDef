@@ -140,7 +140,7 @@ export default function Blog() {
         priority={true} // Se stai usando la funzionalità di rendering di priorità di Next.js
         unoptimized={false} // Se non hai bisogno di ottimizzazione automatica
         onError={handleLogoError}
-          alt="TOGNON"
+          alt={"TOGNON"}
         />
       </Link>
 
