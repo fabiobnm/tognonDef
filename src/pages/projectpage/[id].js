@@ -178,6 +178,8 @@ export default function Blog() {
             loading="eager"
         unoptimized={false} // Se non hai bisogno di ottimizzazione automatica
         onError={handleLogoError}
+                    alt={"TOGNON"}
+
           />
 
         )
