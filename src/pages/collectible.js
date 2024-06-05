@@ -134,8 +134,6 @@ export default function Blog() {
       <Image class="projCoverPort" 
       src={prog.cover?.url ||  prog.gallery[0].url}
         alt="Description of the image"
-        height={50}
-        width={50}
         priority={true} // Se stai usando la funzionalità di rendering di priorità di Next.js
         unoptimized={false} // Se non hai bisogno di ottimizzazione automatica
         onError={handleLogoError}
