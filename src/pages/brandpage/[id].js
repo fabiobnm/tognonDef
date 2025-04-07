@@ -157,7 +157,7 @@ export default function Blog() {
                  <Link href={{
      pathname: '/projectpage/'+ o.slug
    }}> 
-     <Image class='portCover'
+     <img class='portCover'
        src={o.portrait?.url ||  o.gallery[0].url}
          alt="Description of the image"
          width={200} // larghezza dell'immagine
