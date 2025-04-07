@@ -170,7 +170,7 @@ export default function Blog() {
         return(
           
      
-            <Image class="galleryImg" 
+            <img class="galleryImg" 
             src={o.url}
             alt="Description of the image"
             width={600} // larghezza dell'immagine
