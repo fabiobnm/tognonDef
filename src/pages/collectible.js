@@ -131,7 +131,7 @@ export default function Blog() {
   href={{
     pathname: '/collectiblepage/'+ prog.slug
   }}>
-      <Image class="projCoverPort" 
+      <img class="projCoverPort" 
       src={prog.cover?.url ||  prog.gallery[0].url}
         alt="Description of the image"
         priority={true} // Se stai usando la funzionalità di rendering di priorità di Next.js
