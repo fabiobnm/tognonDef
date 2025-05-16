@@ -130,7 +130,7 @@ export default function Blog() {
               return (
                 <div key={i}>
                   {item.isVideo ? (
-                    <video className="galleryImg" style={{width:'70vW'}} src={mediaUrl} controls />
+                    <video className="galleryImg" style={{width:'72vW'}} src={mediaUrl} controls />
                   ) : (
                     <img
                       className="galleryImg"
