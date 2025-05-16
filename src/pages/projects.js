@@ -133,11 +133,12 @@ export default function Blog() {
   }}> 
    <Image class="projCover"
         src={prog.cover?.url ||  prog.gallery[0].url}
-        alt="Description of the image"
+        height={200}
+        width={200}
+        alt="TOGNON"
         priority={true} // Se stai usando la funzionalità di rendering di priorità di Next.js
         unoptimized={false} // Se non hai bisogno di ottimizzazione automatica
         onError={handleLogoError}
-        alt={"TOGNON"}
 
       />
 
