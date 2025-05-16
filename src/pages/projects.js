@@ -131,10 +131,8 @@ export default function Blog() {
   href={{
     pathname: '/projectpage/'+ prog.slug
   }}> 
-   <Image class="projCover"
+   <img class="projCover"
         src={prog.cover?.url ||  prog.gallery[0].url}
-        height={200}
-        width={200}
         alt="TOGNON"
         priority={true} // Se stai usando la funzionalità di rendering di priorità di Next.js
         unoptimized={false} // Se non hai bisogno di ottimizzazione automatica
